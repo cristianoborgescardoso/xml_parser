@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="FlowMonitor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FlowStats"/>
+        <xs:element ref="Ipv4FlowClassifier"/>
+        <xs:element ref="Ipv6FlowClassifier"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlowStats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Flow"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ipv4FlowClassifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Flow"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ipv6FlowClassifier">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Flow">
+    <xs:complexType>
+      <xs:attribute name="delaySum"/>
+      <xs:attribute name="destinationAddress" type="xs:NMTOKEN"/>
+      <xs:attribute name="destinationPort" type="xs:integer"/>
+      <xs:attribute name="flowId" use="required" type="xs:integer"/>
+      <xs:attribute name="jitterSum"/>
+      <xs:attribute name="lostPackets" type="xs:integer"/>
+      <xs:attribute name="protocol" type="xs:integer"/>
+      <xs:attribute name="rxBytes" type="xs:integer"/>
+      <xs:attribute name="rxPackets" type="xs:integer"/>
+      <xs:attribute name="sourceAddress" type="xs:NMTOKEN"/>
+      <xs:attribute name="sourcePort" type="xs:integer"/>
+      <xs:attribute name="throughput" type="xs:decimal"/>
+      <xs:attribute name="txBytes" type="xs:integer"/>
+      <xs:attribute name="txPackets" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

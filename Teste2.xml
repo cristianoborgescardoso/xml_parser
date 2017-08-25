@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<FlowMonitor>
+  <FlowStats>
+    <Flow flowId="1" delaySum="+49983308.0ns" jitterSum="+2974321.0ns" txBytes="29812000" rxBytes="6405468" txPackets="29000" rxPackets="6231" throughput="0.220909" lostPackets="14905">
+    </Flow>
+    <Flow flowId="2" delaySum="+48508702.0ns" jitterSum="+3181069.0ns" txBytes="29812000" rxBytes="6614152" txPackets="29000" rxPackets="6434" throughput="0.228082" lostPackets="14770">
+    </Flow>
+    <Flow flowId="3" delaySum="+30905861.0ns" jitterSum="+3605594.0ns" txBytes="29812000" rxBytes="10767272" txPackets="29000" rxPackets="10474" throughput="0.371362" lostPackets="12119">
+    </Flow>
+    <Flow flowId="4" delaySum="+7976471.0ns" jitterSum="+3164508.0ns" txBytes="188452" rxBytes="188400" txPackets="3624" rxPackets="3623" throughput="0.00649991" lostPackets="0">
+    </Flow>
+    <Flow flowId="5" delaySum="+8929453.0ns" jitterSum="+3531085.0ns" txBytes="188452" rxBytes="188348" txPackets="3624" rxPackets="3622" throughput="0.00649902" lostPackets="0">
+    </Flow>
+    <Flow flowId="6" delaySum="+6767488.0ns" jitterSum="+610262.0ns" txBytes="298270" rxBytes="284770" txPackets="925" rxPackets="916" throughput="0.0099306" lostPackets="9">
+    </Flow>
+  </FlowStats>
+  <Ipv4FlowClassifier>
+    <Flow flowId="1" sourceAddress="1.0.0.2" destinationAddress="7.0.0.2" protocol="17" sourcePort="49153" destinationPort="1235" />
+    <Flow flowId="2" sourceAddress="1.0.0.2" destinationAddress="7.0.0.3" protocol="17" sourcePort="49154" destinationPort="1236" />
+    <Flow flowId="3" sourceAddress="1.0.0.2" destinationAddress="7.0.0.4" protocol="17" sourcePort="49155" destinationPort="1237" />
+    <Flow flowId="4" sourceAddress="1.0.0.2" destinationAddress="7.0.0.5" protocol="6" sourcePort="5000" destinationPort="49153" />
+    <Flow flowId="5" sourceAddress="1.0.0.2" destinationAddress="7.0.0.6" protocol="6" sourcePort="5001" destinationPort="49153" />
+    <Flow flowId="6" sourceAddress="1.0.0.2" destinationAddress="7.0.0.7" protocol="17" sourcePort="1238" destinationPort="49153" />
+  </Ipv4FlowClassifier>
+  <Ipv6FlowClassifier>
+  </Ipv6FlowClassifier>
+</FlowMonitor>
